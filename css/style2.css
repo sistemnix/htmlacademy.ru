@@ -1,0 +1,65 @@
+body {
+    width: 350px;
+    margin: 0;
+    padding: 0 10px;
+    font-size: 14px;
+    font-family: "Arial", sans-serif;
+}
+/* Свойства таблицы */
+table {
+    /* width: 33%;
+    height: 250px;  */
+    border-collapse: collapse;
+    /*border: 2px solid red;*/
+}
+ /* tr {
+    width: 33%;
+ } */
+th {
+    padding: 10px;
+    border: 1px solid black;
+}
+td {
+    padding: 10px;
+    /* padding-right: 10px; */
+    border: 1px solid lightgray;
+    /*background-color: lightyellow;*/
+    /* color: brown; */
+}
+ 
+.th-1 {
+    background-color: darkcyan;
+    color: white;
+}
+.th-2 {
+    background-color: lightblue;  
+    color: white;
+}
+.th-3 {
+    background-color: darkcyan;
+    color: white;
+    text-align: right;
+}
+ /* .row-1 {
+    
+ }*/
+.row-2 {
+   background-color: lightyellow; 
+}
+ /*.row-3 {
+    
+ } */
+.row-4 {
+    background-color: lightyellow; 
+}
+.column-1 {
+    width: 33%;
+}
+.column-2 {
+    text-align: center; 
+    width: 33%;
+}
+.column-3 {
+    width: 33%;
+    text-align: right;
+}

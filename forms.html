@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Тег form</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <h1>Форма входа</h1>
+
+    <!-- Добавьте форму сюда -->
+    <!-- <form action="https://echo.htmlacademy.ru" method="post">
+    </form> -->
+    <a href="index.html">Главная</a>
+    <hr>
+    <!--Форма ввода, тип текст, значение по умолчанию:5-->
+    <h1>Добавить в корзину</h1>
+    <form action="https://echo.htmlacademy.ru" method="post">
+      Количество
+      <input id="total-field" value="5" type="text" name="total"> шт.
+    </form>
+    <hr>
+    <h1>Форма входа</h1>
+    <form action="https://echo.htmlacademy.ru" method="post">
+      <label>Ваш логин <input type="text" name="login"></label>
+    </form>
+    <h2>Связываем подпись и поле по id</h2>
+    <p>Иногда обернуть поле и текст подписи в тег &lt;label&gt; нельзя. <br>
+      Например, когда они размещены в разных ячейках таблицы<br>
+    В этом случае можно связать подписьс полес с помощью атрибута &lt;id&gt;</p>
+    <ol>Алгоритм такой:
+      <li>Добавляем к полю ввода идентификатор с помощью атрибута id.</li>
+      <li>Оборачиваем текст подписи в тег <label>.</li>
+      <li>Добавляем тегу <label> атрибут for.</li>
+      <li>В атрибут for записываем такое же значение, что и в атрибуте id у поля.</li>
+    </ol>
+    <h3>Например:</h3>
+    &lt;label for="user-field-id"&gt;Имя пользователя&lt;/label&gt;<br>
+      ...<br>
+      много-много других тегов<br>
+      ...<br>
+    &lt;input id="user-field-id" type="text" name="username"&gt;
+    <hr>
+    <h1>Форма входа</h1>
+    <form action="https://echo.htmlacademy.ru" method="post">
+      <label for="login-field">Ваш логин</label>
+      <input type="text" name="login" id="login-field">
+      <br>
+      <br>
+      <label for="password-field">Ваш пароль</label>
+      <input type="password" name="password" id="password-field" value="Где же звёздочки?">
+      !!!Что бы поле passwrd обозначалось звездочками, нужно изменить тип text на password!!!!
+    <!--Создание кнопки--> <hr>
+    <label>Войти</label>
+    <input type="submit">
+    <hr>
+    <h4>Многострочное поле ввода</h4>
+    <textarea name="comment" id="comment-field" rows="10">Текст комментария</textarea>
+    <ul>Атрибуты тега &lt;textarea&gt;
+      <li>id</li>
+      <li>name</li>
+      <li>rows(целое число) задаёт высоту многострочного поля в строках.</li>
+      <li>cols(целое число) задаёт ширину поля в символах. Ширина это некоторая<br>
+      "усреднённая величина"</li>
+      <li>!!!Значение "value" отсутствует, а знчение пол умолчанию задаётся текстом,<br>
+      расположенным между тегами &lt;textarea&gt;</li>
+    </ul>
+    <hr>
+    <h4>Checkbox</h4>
+      <input type="checkbox" id="subscribe-field" name="subscribe" checked>
+      <label for="subscribe-field">Подписать вас на рассылку?</label>
+    </form>
+    <hr>
+    <h4>Радиобаттон</h4>
+    <p>Обычно переключатели размещают группами по несколько штук. Причём у переключателей<br>
+    из олдной группы должно быть одинаковое имя и разные знаения, которые задаются с помощью "value".<br>
+    <u>Value является обязательным для переключателей.</u></p>
+    <label>
+      <input type="radio" name="question-one" value="p"> Тег &lt;p&gt;
+    </label>
+      <br>
+    <label>
+      <!-- добавьте второй переключатель сюда -->
+      <input type="radio" name="question-one" value="b" checked> Тег &lt;b&gt;
+    </label>
+    <hr>
+    <h4>Раскрывающийся список или «селект»</h4>
+    <pre>    &lt;select&gt;<br>
+      &lt;option value="1"&gt;Вариант1&lt;/option&gt;<br>
+      &lt;option value="1"&gt;Вариант2&lt;/option&gt;<br>
+    &lt;/select&gt;</pre>
+    <p>Позволяет выбрать один вариант из нескольких</p>
+    <ol>Атрибуты:
+      <li>name</li>
+      <li>id</li>
+    </ol>
+    <p><u>!!Если при отправке формы у выбранного варианта задан "value",<br>
+    то на сервер отправится значение этого атрибута. В проитвном случае<br>
+    будет отправлен текст подписи.!!</u></p>
+    <hr>
+    <h4>Мультиселект</h4>
+    &lt;select multiple size="2"&gt;
+    -size - размер высоты селекта;
+    <p><i>Любимые дни недели:</i></p>
+      <select multiple size="7" name="days">
+        <option>Понедельник</option>
+        <option>Вторник</option>
+        <option>Среда</option>
+        <option>Четверг</option>
+        <option>Пятница</option>
+        <option>Суббота</option>
+        <option selected>Воскресенье</option>
+      </select>
+      <p>В мультиселекте можно выбрать несколько вариантов,<br>
+         щёлкая по ним с зажатой клавишей Ctrl на Windows или Command на MacOS.</p>
+    <hr>
+    <h4>Поле для загрузки файлов</h4>
+    <form action="https://echo.htmlacademy.ru" method="post" enctype="multipart/form-data">
+      <p>Выберите изображение для своего аватара:</p>
+      <!-- Добавьте поле сюда -->
+      <input type="file" name="avatar>"
+      <input type="submit" value="Загрузить">
+    </form>
+    <hr>
+    <h4>Скрытое поле</h4>
+    <p>Его используют когда в форме нужно отправить каке-то дополнительные службные данные,<br>
+       которые не вводяться пользователем.<br>
+      Например, это могут быть реквизиты заказа или номер польхователя в формате оплаты.</p>
+      &lt;input type="hidden"&gt;<br>
+      Пример:<br>
+      <form action="https://echo.htmlacademy.ru" method="post">
+        <label>
+          Сумма платежа:
+          <input type="text" name="amount" value="500"> руб.
+        </label>
+  
+        <!-- Добавьте поле сюда -->
+        <input type="hidden" name="account_number" value="15">
+        <input type="submit" value="Оплатить">
+      </form>
+    <br><a href="index.html">Главная</a>
+  </body>
+</html>

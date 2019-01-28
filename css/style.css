@@ -1,0 +1,118 @@
+body {
+    font-family: "Georgia", serif;
+ }
+ p {
+    margin: 10px 0 16px 0;
+    padding: 5px 10px;
+    border: 1px solid #cccccc;
+    border-left-width: 10px;
+    color: white;
+    background-color: #13c8f5;
+ }
+ .learned-ok {
+    border-color: #27ae60;
+    background-color: #2ecc71;
+    text-decoration: line-through;
+ }
+ .learning-in-progress {
+    border-color: #f39c12;
+    background-color: #f1c40f;
+ }
+ .not-learned {
+    border-color: #c0392b;
+    background-color: #e74c3c;
+ }
+  /*таблицы*/
+  .cell-1 {
+    vertical-align: bottom;
+ }
+ .column-2 {
+    text-align: center;
+ }
+ .column-3 {
+    text-align: center;
+ }
+.row-1 {
+    background-color: pink;
+}
+.row-2 {
+    background-color: lightgreen;
+}
+.row-3 {
+    background-color: lightblue;
+}
+ table {
+    width: 100%;
+    height: 250px; 
+    border-collapse: collapse;
+    border: 2px solid red;
+ }
+ td {
+    padding: 5px;
+    padding-right: 10px;
+    border: 1px solid lightgray;
+    /*background-color: lightyellow;*/
+    color: brown;
+ }
+ th {
+    padding: 10px;
+    border: 1px solid black;
+    color: darkblue;
+    background-color: lightcyan;
+ }
+ caption {
+    margin-bottom: 10px;
+    font-size: 18px;
+ }
+    /*конец таблицы*/
+    /*Работа с блоками и позиционирование*/
+    .p-first {
+      margin-left: 50px;
+    }
+      
+    .p-second {
+      padding: 20px;
+    }
+    
+    .p-third {
+      width: 50%;
+    }
+    .p-absolute {
+      padding: 20px;
+      background-color: rgba(2, 90, 2, 0.25);
+      position: absolute;
+      left: 100px;
+      bottom: 200px;
+    }
+    /* Про биатлонистов */
+    /* Первый биатлонист закрыл все мишени, кроме четвёртой. */
+    .shooter-1 li {
+      background-color: white;
+    }
+    .shooter-1 .third + li {
+      background-color: red;
+    }
+    /* А второй промахнулся по второй, а на четвёртой произошла ошибка техники. */
+.shooter-2 li {
+      background-color: white;
+    }
+    
+    .shooter-2 .first + li {
+      background-color: red;
+    }
+    
+    .shooter-2 .third + li {
+      background-color: yellow;
+    }
+    /* Дочерние элементы */
+    /* Исправьте таблицу результатов:
+    Нижние рамки должны остаться только у элементов списка первого уровня.
+    Выделение жирным должно остаться только у фамилий. */
+    .places > li {
+      border-bottom: 2px solid #cccccc;
+    }
+    
+    .places > li > span {
+      font-weight: bold;
+    }
+    
