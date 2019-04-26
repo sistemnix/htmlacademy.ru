@@ -1,0 +1,22 @@
+.container {
+    width: 200px;
+    margin: 0 auto;
+}
+.left {
+    width: 200px;
+	height: 100px;
+    float: left; 
+    background: rgb(255,51,102);  
+   }
+.right { 
+    width: 200px;
+	height: 100px;
+    float: left;  
+    background: rgb(0,255,153);  
+   } 
+.center { 
+    width: 200px;
+	height: 100px;
+    float: left;
+    background: rgb(255,0,0);  
+   } 

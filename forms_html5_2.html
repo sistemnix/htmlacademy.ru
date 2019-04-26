@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <title>localStorage</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/html5.css">
+    <link rel="stylesheet" href="css/forms_html5_1.css">
+  </head>
+  <body>
+    <header class="page-header">
+            <header class="page-header">
+                    <div class="logo">
+                        <img src="img/logo.svg" width="90" height="90" alt="Cat Energy">
+                    </div>
+                    <nav class="main-menu">
+                        <ul>
+                            <li><a href="forms_html5.html">Начало</a></li>
+                            <li><a href="index.html">Главная</a></li>
+                            <li><a href="html5-post.html">Посты</a></li>
+                            <li><a href="forms_html5_1.html">HTML5 Получение визы</a></li>
+                            <li><a href="ispitanie/html5-ispit_19-19.html">Учим HTML5 (Испытание)</a></li>
+                            <li><a href="#me">Обо мне</a></li>
+                        </ul>
+                </header>
+    </header>
+    <main>
+      <form action="/echo" method="post">
+        <label for="note">Текст заметки</label>
+        <textarea id="note" name="note" rows="9">Пойми, в Норвегии только и говорят, что о море. 
+          Как оно бесконечно прекрасно… О закате, который они видели… О том, как солнце, погружаясь в волны,
+          стало алым как кровь. И почувствовали, что море впитало энергию светила в себя, и солнце было укрощено, 
+          и огонь уже догорал в глубине.</textarea>
+        <div class="buttons">
+          <input type="submit" value="Сохранить">
+        </div>
+      </form>
+    </main>
+    <footer class="page-footer"></footer>
+    
+    <script>
+      if (window.localStorage) {
+        var elements = document.querySelectorAll('[name]');
+
+        for (var i = 0, length = elements.length; i < length; i++) {
+          (function(element) {
+            var name = element.getAttribute('name');
+
+            element.value = localStorage.getItem(name) || '';
+
+            element.onkeyup = function() {
+              localStorage.setItem(name, element.value);
+            };
+          })(elements[i]);
+        }
+      }
+    </script>
+    
+  </body>
+</html>
