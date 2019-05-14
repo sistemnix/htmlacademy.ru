@@ -1,0 +1,9 @@
+body {background-color: cadetblue; color:white;}
+
+li ul {
+    display: none;
+}
+  
+li:hover ul {
+    display: block;
+}
